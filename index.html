@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Application Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+
+
+</head>
+<body>
+  <h1>Job Application Tracker</h1>
+
+  <div id="jobCount" class="job-count">Total Jobs Applied: 0</div>
+
+  <!-- Job Entry Form -->
+  <form id="jobForm">
+    <!-- Job Title Input -->
+    <input type="text" id="title" placeholder="Job Title" required />
+    <!-- Company Name Input -->
+    <input type="text" id="company" placeholder="Company Name" required />
+    <!-- Location Input -->
+    <input type="text" id="location" placeholder="Location" required />
+    <!-- Skills Input -->
+    <input type="text" id="skills" placeholder="Skills (comma-separated)" required />
+    <!-- Date Applied Input -->
+    <label for="dateApplied">Date Applied</label>
+    <input type="date" id="dateApplied" required />
+    <!-- Notes Input -->
+    <textarea id="notes" placeholder="Notes"></textarea>
+    <!-- Follow Up Date Input -->
+      <label for="followUp">Follow Up Date</label>
+    <input type="date" id="followUp" placeholder="Follow Up Date" />
+    <!-- Status Dropdown -->
+    <select id="status">
+      <option value="Newly Applied">Newly Applied</option>
+      <option value="MIA">MIA</option>
+      <option value="Heard Back">Heard Back</option>
+      <option value="Rejected">Rejected</option>
+      <option value="Sent Assessment">Sent Assessment</option>
+    </select>
+    <!-- Submit Button -->
+    <button type="submit">Add Job</button>
+  </form>
+
+  <!-- Controls Section: Search and Filters -->
+  <div class="controls">
+    <!-- Search Box -->
+    <input type="text" id="search" placeholder="Search jobs..." />
+    <!-- Status Filter Dropdown -->
+    <select id="statusFilter">
+      <option value="">All Statuses</option>
+      <option value="Newly Applied">Newly Applied</option>
+      <option value="MIA">MIA</option>
+      <option value="Heard Back">Heard Back</option>
+      <option value="Rejected">Rejected</option>
+      <option value="Sent Assessment">Sent Assessment</option>
+    </select>
+    <!-- Export Buttons -->
+    <button onclick="downloadCSV()">Download CSV</button>
+    <button onclick="downloadJSON()">Download JSON</button>
+  </div>
+
+  <!-- Job Applications Table -->
+  <table id="jobTable">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Company</th>
+        <th>Location</th>
+        <th>Skills</th>
+        <th>Date Applied</th>
+        <th>Notes</th>
+        <th>Follow Up</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

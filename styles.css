@@ -1,0 +1,133 @@
+/*
+  File: styles.css
+  Description: Styles for Job Application Tracker (Improved & Mobile-First)
+*/
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  color: #333;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #1f5938;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+form, .controls {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+input, select, textarea, button {
+  width: 100%;
+  font-size: 15px;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+button {
+  background-color: #1f5938;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #174b30;
+}
+
+.job-count {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.controls input[type="text"],
+.controls select {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#saveAddAnotherBtn {
+  background-color: #444;
+  margin-top: -4px;
+}
+
+#saveAddAnotherBtn:hover {
+  background-color: #333;
+}
+
+table {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+  background-color: #fff;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+th {
+  background-color: #e7e7e7;
+  font-weight: 600;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.status-MIA {
+  background-color: #ffe6e6;
+}
+.status-Heard\ Back {
+  background-color: #e6ffe6;
+}
+.status-Rejected {
+  background-color: #fff0e6;
+}
+.status-Sent\ Assessment {
+  background-color: #e6f0ff;
+}
+.status-Newly\ Applied {
+  background-color: #f0f8ff;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.4em;
+  }
+
+  th, td {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
